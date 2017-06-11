@@ -1,0 +1,153 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  margin: 0 0 1000px;
+
+  @include for-tablet-portrait-up {
+    margin: 0 0 800px;
+  }
+}
+
+.footer {
+  background: #df494a;
+  color: white;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+
+  @include for-tablet-portrait-up {
+    left: 25%;
+    width: 75%;
+  }
+
+  @include for-tablet-landscape-up {
+    left: 20%;
+    width: 80%;
+  }
+}
+
+.footer__section {
+  margin-bottom: 60px;
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 80px;
+  }
+}
+
+.footer__section--last {
+  margin-bottom: 0;
+}
+
+.footer__section__location {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: underline;
+  color: white;
+  text-decoration-color: white;
+
+  @include for-tablet-portrait-up {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 24px;
+  }
+}
+
+.footer__section__social {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+i {
+  font-size: 20px;
+  transition: .4s ease-in-out;
+
+  &:hover {
+    transition: .4s ease-in-out;
+    transform: scale(1.1);
+  }
+}
+
+.footer__section__contact-btn {
+  display: inline-block;
+  background: none;
+  border: 1px solid white;
+  padding: 18px 38px;
+  letter-spacing: 1.5px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 15px;
+  transition: .4s ease-in-out;
+
+  &:hover {
+    transition: .4s ease-in-out;
+    background: white;
+    color: #474747;
+    transform: scale(1.04);
+  }
+}
+
+.footer__section__hours-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer__section--copyright {
+  position: relative;
+  color: black;
+}
+
+.footer__section__copyright {
+  // position: absolute;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  top: 90px;
+  color: #f1ebda;
+  font-weight: 100;
+
+  @include for-tablet-portrait-up {
+    position: absolute;
+    // bottom: 30px;
+    top: 60px;
+    padding: 18px 0;
+    color: #c7af6c;
+  }
+}
+
+.footer__section__copyright--left {
+  margin-bottom: 8px;
+  // left: 25px;
+
+  @include for-tablet-portrait-up {
+    left: 25px;
+    margin-bottom: 0;
+  }
+}
+
+.footer__section__copyright--right {
+  @include for-tablet-portrait-up {
+    right: 25px;
+  }
+}
+
+.footer__section__maribel-link {
+  @include for-tablet-portrait-up {
+    color: #c7af6c;
+  }
+}

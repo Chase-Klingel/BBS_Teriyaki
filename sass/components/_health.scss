@@ -1,0 +1,257 @@
+.wrapper {
+  padding: 0 10%;
+
+  @include for-tablet-portrait-up {
+    padding: 0;
+  }
+}
+
+.panel {
+  position: relative;
+  // z-index: -1;
+  width: 100%;
+}
+
+.fact {
+  height: 100%;
+  width: 100%;
+  padding-top: 250px;
+
+  @include for-tablet-portrait-up {
+    margin-left: 35%;
+    padding-top: 10%;
+    width: 63%;
+    padding-right: 5%;
+  }
+
+  @media only screen and (min-width: 768px) and (orientation:portrait) and (min-height:1024px) {
+    padding-top: 200px;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-left: 30%;
+  }
+
+  @include for-desktop-up {
+    margin-left: 28%;
+    padding-top: 100px;
+    padding-right: 0;
+  }
+}
+
+.fact--real-ingredients {
+  @include for-tablet-portrait-up {
+    padding-top: 13%;
+  }
+
+  @include for-desktop-up {
+    padding-top: 130px;
+  }
+}
+
+.fact__header {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: black;
+  line-height: 120%;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  @include for-tablet-portrait-up {
+    font-size: 30px;
+  }
+
+  @include for-desktop-up {
+    font-size: 45px;
+  }
+}
+
+.fact__highlight {
+  color: #dd7241;
+}
+
+.box {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 160px;
+  width: 230px;
+  border-radius: 5px;
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+
+  @media only screen and (min-width: 768px) and (orientation:portrait) and (min-height:1024px) {
+    top: 560px;
+  }
+
+  @include for-special-up {
+    display: block;
+    top: auto;
+    bottom: 32%;
+    left: 70%;
+    height: 220px;
+    width: 300px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.16), 0 3px 10px rgba(0,0,0,0.23);
+  }
+
+  @include for-desktop-up {
+    right: 0;
+  }
+}
+
+.outter-circle {
+  position: relative;
+  display: block;
+  top: 0px;
+  margin: auto;
+  background: black;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+
+  @include for-tablet-portrait-up {
+    top: 45px;
+  }
+}
+
+.inner-circle {
+  position: absolute;
+  background: none;
+  border: 2px dotted #dd7241;
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 7.5px;
+}
+
+.inner-circle__title {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.inner-circle__title--local {
+  margin-top: 40px;
+}
+
+.inner-circle__title--veggie-fed {
+  margin-top: 35px;
+}
+
+.inner-circle__title--certified {
+  margin-top: 37px;
+}
+
+.inner-circle__title--veggies {
+  margin-top: 37px;
+}
+
+.fact__description {
+  line-height: 160%;
+  width: 80%;
+
+  @include for-tablet-portrait-up {
+    font-size: 18px;
+    color: white;
+    width: 60%;
+    position: absolute;
+    top: 58%;
+  }
+
+  @include for-special-up {
+    line-height: 200%;
+    bottom: 30px;
+    width: 40%;
+  }
+
+  @media screen and ( max-height: 900px ){
+    bottom: 60px;
+  }
+}
+
+.fact__description--flavors,
+.fact__description--ingredients
+ {
+  @include for-tablet-portrait-up {
+    bottom: 70px;
+  }
+}
+
+.test {
+  display: none;
+  position: absolute;
+  height: 60%;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  background: #df494a;
+
+  @include for-special-up {
+    height: 50%;
+  }
+}
+
+.fact__mobile-btn {
+  position: absolute;
+  z-index: 10;
+  background: none;
+  border: 1px solid lightgrey;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  bottom: 5px;
+  right: 0;
+  outline: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+}
+
+.fact__mobile-btn__arrow {
+  font-size: 24px;
+  color: #474747;
+}
+
+.food-overview__btn--health-link {
+  position: absolute;
+  display: none;
+  border: none;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    border: none;
+    background: black;
+    color: white;
+    transition: .3s ease-in-out;
+  }
+
+  @include for-tablet-portrait-up {
+    display: block;
+    background: white;
+    color: black;
+    bottom: 15px;
+    right: 30px;
+    left: auto;
+  }
+}
+
+@include for-tablet-portrait-up {
+  .nav,
+  .test {
+    display: block;
+  }
+}

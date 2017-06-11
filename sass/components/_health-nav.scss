@@ -1,0 +1,54 @@
+.health-nav {
+  display: none;
+
+  @include for-tablet-landscape-up {
+    display: block;
+  }
+}
+
+.health-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: -17px;
+  width: 80%;
+  left: 25%;
+  list-style: none;
+  padding: 0;
+  z-index: 2;
+  border-bottom: 1px solid rgba(155, 155, 155, .2);
+
+  @include for-tablet-landscape-up {
+    left: 20%;
+  }
+}
+
+.health-list__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+  height: 70px;
+  color: black;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(155, 155, 155, .2);
+  line-height: 160%;
+}
+
+.health-list__item--veggies {
+  flex-basis: 33%;
+}
+
+.health-list__item:hover {
+  cursor: pointer;
+}
+
+.health-list__item--active {
+  border-bottom: 4px solid #dd7241;
+  color: #dd7241;
+}
